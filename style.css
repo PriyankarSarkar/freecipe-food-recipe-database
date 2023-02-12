@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Search div */
+.search_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    width: 100%;
+    box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.114);
+    background-color: white;
+}
+.input{
+    border: none;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16.5px;
+    font-weight:bold;
+    letter-spacing: 0.8px;
+    outline: none;
+    width: 70%;
+    max-width: 440px;
+    min-width: 100px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 2px solid rgba(142, 142, 188, 0.995);
+}
+.search_icon{
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 46px;
+    height: 45px;
+    padding: 7px;
+    padding-right: 8px;
+    cursor: pointer;
+    background-color: rgba(142, 142, 188, 0.995);
+    transition: 0.3s ease-in-out;
+}
+.search_icon:hover{
+    background-color: rgba(106, 106, 139, 0.995);
+}
+
+/* results */
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    height: 100%;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    background-color: rgba(218, 165, 32, 0.482);
+    width: 95%;
+    max-width: 350px;
+    margin: 14px;
+    box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.114);
+    transition: all 0.3s ease-in-out;
+}
+.item:hover{
+    box-shadow: 1.8px 3px 9px 1px rgba(0, 0, 0, 0.409);
+}
+.item_img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.item_name{
+    word-wrap: break-word;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    padding: 0px 5px;
+    text-transform: uppercase;
+}
+.item:hover{
+    transform: scale(1.1);
+}
+
+/* Recipe */
+.recipe_main{
+    position: fixed;
+    z-index: 20;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide_recipe{
+    display: none;
+}
+.about_item_recipe_outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:bisque;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 20px;
+    height: 85%;
+    max-height: 435px;
+    position: absolute;
+}
+.about_item_recipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    padding: 0px 15px;
+    overflow-y: auto;
+    gap: 10px;
+}
+.recipe_item_img{
+    border-radius: 50%;
+    width: 120px;
+    aspect-ratio: 1/1;
+    margin-top: 12px;
+}
+.recipe_item_name, .recipe_heading{
+    list-style: none;
+    font-weight: bold;
+}
+.recipe_item_name{
+    text-align: center;
+    font-size: 19px;
+}
+
+.recipe_heading{
+    text-align: left;
+    width: 100%;
+    font-size: 17px;
+}
+.recipe{
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: pre-line;
+}
+.watch_video{
+    text-decoration: none;
+    color: rgb(253, 68, 0);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+.watch_video:hover{
+    color: rgba(255, 68, 0, 0.498);
+}
+.hide_watch_video{
+    display: none;
+}
+.close{
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 8px 0px;
+    margin-top: 5px;
+}
+
+/* Invalid input */
+.invalid_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-color: white;
+}
+.hide_invalid_input{
+    display: none;
+}
+.invalid_input_text{
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search_food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+.search-food-gif{
+    height: 150px;
+    animation: fade-in 5s;
+}
+.background_quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.hide_search_food{
+    display: none;
+}
+
+.credit{
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0px;
+}
+.link-social{
+    font-weight: bold;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+.link:hover{
+    color: rgba(142, 142, 188, 0.995);
+}
+
+@keyframes fade-in {
+    0%{opacity: 0%}
+    100%{opacity: 100%}
+}
+
+/* about item scroll */
+.about_item_recipe::-webkit-scrollbar{
+    width: 7px;
+}
+.about_item_recipe::-webkit-scrollbar-track{
+    border-radius: 5px;
+}
+.about_item_recipe::-webkit-scrollbar-thumb{
+    background-color: rgba(128, 128, 128, 0.484);
+    border-radius: 5px;
+}
+.about_item_recipe::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(128, 128, 128, 0.772);
+}
+
+@media(min-width:500px){
+    .item{
+        max-width: 40%;
+        font-size: 12px;
+    }
+}
+@media(min-width: 701px){
+    .item{
+        max-width: 28%;
+    }
+}
+@media(min-width: 1000px){
+    .item{
+        max-width: 22%;
+        font-size: 13.5px;
+    }
+}
+
+@media(max-width: 279px){
+    .input{
+        font-size: 15px;
+    }
+}
