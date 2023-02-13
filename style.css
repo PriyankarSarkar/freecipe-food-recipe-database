@@ -19,6 +19,8 @@ body{
 
 /* Search div */
 .search_div{
+    position: fixed;
+    z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +70,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 80px;
     height: 100%;
 }
 .item{
